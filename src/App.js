@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ListWrapper from './components/ListWrapper/ListWrapper';
+import './index.css';
 
 function App() {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <div>
+      <ListWrapper />
+    </div>
   );
 }
 
