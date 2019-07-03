@@ -1,16 +1,15 @@
 import React from 'react';
 import './ListItem.css';
-import personOneImage from '../../../assets/images/person_one.jpeg'
 
 
 
-const ListItem = () => (
+const ListItem = (props) => (
     <li className="listItem__wrapper">
-        <img src={personOneImage} class="listItem__image" alt="First Person" />
+        <img src={props.image} className="listItem__image" alt="First Person" />
         <div>
-            <h2 className="listItem__name">video</h2>
-            <p className="listItem__description">qwertyui</p>
-            <button className="listItem__button">visit twitter page</button>
+            <h2 className="listItem__name">{props.name || 'Ni mom pojęcia kto to'}</h2>
+            <p className="listItem__description">{props.description || 'Ni mom pojęcia o co mu chodzi'}</p>
+            <a href={props.link} className="listItem__button">visit profile</a>
         </div>
     </li>
 );
