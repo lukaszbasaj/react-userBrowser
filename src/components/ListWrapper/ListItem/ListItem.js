@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ListItem.css';
 
 
@@ -12,11 +13,26 @@ const ListItem = ({
         <li className="listItem__wrapper">
             <img src={image} className="listItem__image" alt={name} />
             <div>
-                <h2 className="listItem__name">{name || 'Ni mom pojęcia kto to'}</h2>
-                <p className="listItem__description">{description || 'Ni mom pojęcia o co mu chodzi'}</p>
+                <h2 className="listItem__name">{name}</h2>
+                <p className="listItem__description">{description}</p>
                 <a href={twitterLink} className="listItem__button">visit profile</a>
             </div>
         </li>
     );
 
+
+ListItem.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    twitterLink: PropTypes.string,
+}
+
+ListItem.defaultProps = {
+    description: 'Some random awesome person'
+}
+
+
 export default ListItem;
+
+
