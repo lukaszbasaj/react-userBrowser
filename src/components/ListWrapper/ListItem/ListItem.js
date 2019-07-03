@@ -15,7 +15,7 @@ const ListItem = ({
             <div>
                 <h2 className="listItem__name">{name}</h2>
                 <p className="listItem__description">{description}</p>
-                <a href={twitterLink} className="listItem__button">visit profile</a>
+                <a href={twitterLink} target="_blank" rel="noopener noreferrer" className="listItem__button">visit profile</a>
             </div>
         </li>
     );
