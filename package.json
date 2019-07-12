@@ -1,5 +1,5 @@
 {
-  "name": "twitterBrowser",
+  "name": "userBrowser",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
